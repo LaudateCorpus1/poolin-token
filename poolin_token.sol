@@ -1,7 +1,12 @@
 pragma solidity ^0.4.24;
 
 // ----------------------------------------------------------------------------
-// 'POOLIN TOKEN' token contract
+// 'Poolin Miner Token' token contract
+//
+// Symbol      : POOLIN / PIN
+// Name        : Poolin Miner Token
+// Total supply: 2100000000
+// Decimals    : 6
 //
 // (c) poolin.com, 2018-07
 // ----------------------------------------------------------------------------
@@ -427,19 +432,8 @@ contract PausableToken is StandardToken, Pausable {
   }
 }
 
+// ----------------------------------------------------------------------------
 
-// ----------------------------------------------------------------------------
-// 'POOLIN TOKEN' token contract
-//
-// Symbol      : PIT
-// Name        : POOLIN TOKEN
-// Total supply: 2100000000
-// Decimals    : 18
-//
-//
-//
-// (c) poolin.com, 2018-07
-// ----------------------------------------------------------------------------
 contract PoolinToken is PausableToken {
   string public name;
   string public symbol;
@@ -448,7 +442,7 @@ contract PoolinToken is PausableToken {
   constructor() public {
     name     = "Poolin Miner Token";
     symbol   = "POOLIN";
-    decimals = 18;
+    decimals = 6;
 
     // total supply: 21*10^8
     totalSupply_ = 2100000000 * (uint256(10) ** decimals);
