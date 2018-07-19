@@ -270,13 +270,12 @@ contract StandardToken is ERC20, BasicToken {
 contract Ownable {
   address public owner;
 
-
   event OwnershipRenounced(address indexed previousOwner);
+
   event OwnershipTransferred(
     address indexed previousOwner,
     address indexed newOwner
   );
-
 
   /**
    * @dev The Ownable constructor sets the original `owner` of the contract to the sender
@@ -435,37 +434,21 @@ contract PausableToken is StandardToken, Pausable {
 // ----------------------------------------------------------------------------
 
 contract PoolinToken is PausableToken {
-  string public name;
-  string public symbol;
-  uint8  public decimals;
+  string public constant name     = "Poolin Miner Token";
+  string public constant symbol   = "POOLIN";
+  uint8  public constant decimals = 6;
 
-  constructor() public {
-    name     = "Poolin Miner Token";
-    symbol   = "POOLIN";
-    decimals = 6;
-
-    // total supply: 21*10^8
-    totalSupply_ = 2100000000 * (uint256(10) ** decimals);
-
-    // transfer to owner
-    balances[msg.sender] = totalSupply_;
-    emit Transfer(address(0), msg.sender, totalSupply_);
-  }
+  // total supply: 21*10^8
+  uint256 public constant K_INITIAL_SUPPLY = uint256(2100000000) * (uint256(10) ** decimals);
 
   /**
-   * @dev Transfer tokens to multiple parties at once
-   * @param _receivers address  The address which you want to send tokens to
-   * @param _values    uint256  The amount of tokens to be transfer
+   * Token Constructor
+   *
    */
-  function batchTransfer(address[] _receivers, uint256[] _values)
-    public
-    whenNotPaused
-    returns (bool success)
-  {
-      require(_receivers.length == _values.length);
-      for (uint256 i = 0; i < _receivers.length; i++) {
-        transfer(_receivers[i], _values[i]);
-      }
-      return true;
+  constructor() public {
+    totalSupply_         = K_INITIAL_SUPPLY
+    balances[msg.sender] = K_INITIAL_SUPPLY;
+
+    emit Transfer(address(0), msg.sender, K_INITIAL_SUPPLY);
   }
 }
