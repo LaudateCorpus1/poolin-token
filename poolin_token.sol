@@ -446,7 +446,7 @@ contract PoolinToken is PausableToken {
    *
    */
   constructor() public {
-    totalSupply_         = K_INITIAL_SUPPLY
+    totalSupply_         = K_INITIAL_SUPPLY;
     balances[msg.sender] = K_INITIAL_SUPPLY;
 
     emit Transfer(address(0), msg.sender, K_INITIAL_SUPPLY);
