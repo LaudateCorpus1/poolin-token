@@ -3,7 +3,7 @@ pragma solidity ^0.4.24;
 // ----------------------------------------------------------------------------
 // 'Poolin Miner Token' token contract
 //
-// Symbol      : POOLIN / PIN
+// Symbol      : POOLIN
 // Name        : Poolin Miner Token
 // Total supply: 2100000000
 // Decimals    : 18
