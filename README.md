@@ -11,7 +11,7 @@
 
 * Owner Address: `0xDb83739fb26F0539C1596Dd82c4C903D34A1a822`
   * https://etherscan.io/address/0xdb83739fb26f0539c1596dd82c4c903d34a1a822
-* Contract Address: `0xb01f85db1d8cd9961cb016354afd7a676f932fe3`
-  * https://etherscan.io/token/0xb01f85db1d8cd9961cb016354afd7a676f932fe3
-* Created at: Jul-23-2018 07:55:07 AM +UTC
+* Contract Address: `0x005275450e77bfa6bcbd04d85175d5d0f2dfae43`
+  * https://etherscan.io/token/0x005275450e77bfa6bcbd04d85175d5d0f2dfae43
+* Created at: Jul-24-2018 03:46:41 PM +UTC
 
