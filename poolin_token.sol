@@ -3,8 +3,9 @@ pragma solidity ^0.4.24;
 // ----------------------------------------------------------------------------
 // 'Poolin Miner Token' token contract
 //
-// Symbol      : POOLIN
+// Symbol      : PIN
 // Name        : Poolin Miner Token
+// Website     : https://www.poolin.com
 // Total supply: 2100000000
 // Decimals    : 18
 //
@@ -422,11 +423,11 @@ contract PausableToken is StandardToken, Pausable {
 
 contract PoolinToken is PausableToken {
   string public constant name     = "Poolin Miner Token";
-  string public constant symbol   = "POOLIN";
+  string public constant symbol   = "PIN";
   uint8  public constant decimals = 18;
 
-  // total supply: 21*10^8
-  uint256 public constant K_INITIAL_SUPPLY = uint256(2100000000) * (uint256(10) ** decimals);
+  // total supply: 21 * 10^8 * 10^18
+  uint256 internal constant K_INITIAL_SUPPLY = 2100000000 * 10 ** uint256(decimals);
 
   /**
    * Token Constructor
